@@ -23,7 +23,7 @@ sudo ip rule add fwmark 171 table vpn
 
 echo "Staring to poll processes"
 
-PROCESSES="vesktop discord vesktop.bin firefox"
+PROCESSES="vesktop discord vesktop.bin firefox electron app.asar"
 
 proc_array=(${PROCESSES//;/ })
 
