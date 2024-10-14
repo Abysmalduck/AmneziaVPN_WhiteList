@@ -7,8 +7,8 @@ sudo mkdir /sys/fs/cgroup/amnesia_whitelist/
 sudo iptables -t mangle -F
 sudo iptables -t mangle -A OUTPUT -m cgroup --path "amnesia_whitelist" -j MARK --set-mark 171
 sudo iptables -t mangle -A INPUT -m cgroup --path "amnesia_whitelist" -j MARK --set-mark 171
-sudo iptables -t mangle -A OUTPUT -m cgroup --path "amnesia_whitelist" -j LOG --log-prefix "MARK PACKET INP "
-sudo iptables -t mangle -A OUTPUT -m cgroup --path "amnesia_whitelist" -j LOG --log-prefix "MARK PACKET OUT "
+#sudo iptables -t mangle -A OUTPUT -m cgroup --path "amnesia_whitelist" -j LOG --log-prefix "MARK PACKET IN "
+#sudo iptables -t mangle -A OUTPUT -m cgroup --path "amnesia_whitelist" -j LOG --log-prefix "MARK PACKET OUT "
 
 sudo ip route del "0.0.0.0/1"
 sudo ip route del "1.0.0.1"
