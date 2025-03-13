@@ -1,5 +1,3 @@
 #!/bin/bash
-
-cd $(dirname $0)
-
-exec konsole -e ./amnesia_whitelist.sh
+SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+konsole -e "pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY bash \"${SCRIPT_DIR}/amnesia_whitelist.sh\""
