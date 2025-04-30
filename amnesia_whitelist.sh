@@ -40,7 +40,7 @@ ip rule add fwmark 171 table vpn
 
 echo "Starting to poll processes"
 
-PROCESSES="vesktop discord vesktop.bin firefox electron app.asar"
+PROCESSES="vesktop discord vesktop.bin firefox electron app.asar Discord"
 proc_array=(${PROCESSES})
 
 while true
