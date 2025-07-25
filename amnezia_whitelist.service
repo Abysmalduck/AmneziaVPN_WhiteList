@@ -1,0 +1,6 @@
+[Service]
+Type=simple
+ExecStart=bash '/opt/AmneziaVPN_WhiteList_Service/amnesia_whitelist.sh'
+
+[Install]
+WantedBy=multi-user.target
